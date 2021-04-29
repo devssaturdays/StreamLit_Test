@@ -17,17 +17,32 @@ df = pd.DataFrame({
 
 df
 
+"""
+## Chart with random data
+Here's our first attempt at using data to create a table:
+"""
+
+
 chart_data = pd.DataFrame(
      np.random.randn(20, 3),
      columns=['a', 'b', 'c'])
 
 st.line_chart(chart_data)
 
+"""
+## Map with random data
+Here's our first attempt at using data to create a table:
+"""
+
 map_data = pd.DataFrame(
     np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
     columns=['lat', 'lon'])
 
 st.map(map_data)
+
+"""
+## CheckBox that enables a random dataframe
+"""
 
 if st.checkbox('Show dataframe'):
     chart_data = pd.DataFrame(
